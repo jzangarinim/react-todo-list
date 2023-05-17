@@ -8,6 +8,7 @@ const TaskList = (props) => {
           return (
             <li
               key={`li${index}`}
+              id={index}
               className="mt-1 p-3"
               onMouseEnter={() => {
                 props.setView({ display: "inline-block" });
@@ -16,7 +17,7 @@ const TaskList = (props) => {
                 props.setView({ display: "none" });
               }}
             >
-              {todo}
+              {todo.label}
               <button
                 style={props.view}
                 key={`btn${index}`}
